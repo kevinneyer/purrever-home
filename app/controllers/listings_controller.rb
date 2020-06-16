@@ -31,6 +31,11 @@ before_action :find_listing, only: [:show, :edit, :update, :destroy]
         @listing.update(listings_params)
         redirect_to listing_path(@listing)
     end
+
+    def destroy
+        @listing.destroy
+        redirect_to listings_path
+    end
 private
 
 def find_listing
