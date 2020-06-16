@@ -15,7 +15,7 @@ Listing.destroy_all
 # User.create
 
 15.times do
-Cat.create(name: Faker::Creature::Cat.name , breed: Faker::Creature::Cat.breed, age: rand(1..15) , favorite_food:Faker::Food.dish )
+Cat.create(name: Faker::Creature::Cat.name , breed: Faker::Creature::Cat.breed, age: rand(1..15) , favorite_food:Faker::Food.dish, image_url:  )
 end 
 
 3.times do
