@@ -1,1 +1,23 @@
-<%= render 'form' %>
+<h1>Create New Listing!</h1>
+
+<h3>Now that the new kitty is created, make your listing!</h3>
+
+<%= form_for @listing do |f| %>
+<%= f.label :title %>
+<%= f.text_field :title %> <br>
+
+<%= f.label :content %>
+<%= f.text_field :content %><br>
+
+<%= f.label:date_added %>
+<%= f.date_field :date_added %><br>
+
+<%= f.label:cat_id %>
+<%= f.collection_select :cat_id, @cat, :id, :name %><br>
+
+<%= f.label:adoption_center_id %>
+<%= f.collection_select :adoption_center_id, @adoption_centers, :id, :location %><br>
+
+<%= f.submit %>
+
+<% end %>

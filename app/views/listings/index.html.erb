@@ -2,3 +2,5 @@
 <% @listings.each do |listing| %>
 <ul><li><%= link_to listing.cat.name, listing_path(listing) %></li></ul>
 <% end %>
+
+<%= button_to "Create a New Listing!", flow_path, method: :get%>

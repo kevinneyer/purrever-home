@@ -12,7 +12,7 @@ class ListingsController < ApplicationController
 
     def new
         @listing = Listing.new
-        @cats = Cat.all
+        @cat = Cat.last
         @adoption_centers = AdoptionCenter.all
     end
 
