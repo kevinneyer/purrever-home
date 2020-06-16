@@ -9,8 +9,12 @@ class CatsController < ApplicationController
 
     def create
         @cat = Cat.create(cat_params)
-
-        redirect_to new_listing_path
+        if @cat.valid?
+            redirect_to new_listing_path
+        else
+            flash[:errors] = @cat.errors.full_messages
+            redirect_to new_cat_path
+        end  
     end
 
     private

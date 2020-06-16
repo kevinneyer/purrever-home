@@ -2,6 +2,8 @@
 
 <h3>Now that the new kitty is created, make your listing!</h3>
 
+<%= render 'flash' %>
+
 <%= form_for @listing do |f| %>
 <%= f.label :title %>
 <%= f.text_field :title %> <br>
@@ -13,7 +15,7 @@
 <%= f.date_field :date_added %><br>
 
 <%= f.label:cat_id %>
-<%= f.collection_select :cat_id, @cat, :id, :name %><br>
+<%= f.collection_select :cat_id, @cats, :id, :name %><br>
 
 <%= f.label:adoption_center_id %>
 <%= f.collection_select :adoption_center_id, @adoption_centers, :id, :location %><br>

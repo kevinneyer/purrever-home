@@ -1,0 +1,9 @@
+<h1>View All Adoption Centers</h1>
+
+<% @adoption_centers.each do |adoption_center| %>
+<ul>
+    <li>Adoption Center Name: <%= link_to adoption_center.name, adoption_center_path(adoption_center) %> Adoption Center Location: <%= adoption_center.location %> </li>
+</ul>
+
+
+<% end %>

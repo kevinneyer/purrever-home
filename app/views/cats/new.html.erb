@@ -1,5 +1,7 @@
 <h1>Create a New Cat!</h1>
 
+<%= render 'listings/flash' %>
+
 <%= form_for @cat do |f| %>
 <%= f.label :name %>
 <%= f.text_field :name%><br>
