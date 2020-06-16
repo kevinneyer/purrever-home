@@ -1,12 +1,12 @@
 class ListingsController < ApplicationController
-before_action :find_listing, only: [:show, :edit, :update, :destroy]
+  
+    before_action :find_listing, only: [:show, :edit, :update, :destroy]
 
     def index
         @listings = Listing.all 
     end
 
     def show
-       
         @cat = @listing.cat
     end
 
@@ -17,7 +17,6 @@ before_action :find_listing, only: [:show, :edit, :update, :destroy]
     end
 
     def create
-       
         @listing = Listing.create(listings_params)
         redirect_to listing_path(@listing)
     end
@@ -36,15 +35,17 @@ before_action :find_listing, only: [:show, :edit, :update, :destroy]
         @listing.destroy
         redirect_to listings_path
     end
-private
 
-def find_listing
-    @listing = Listing.find(params[:id])
-end
 
-def listings_params
-    params.require(:listing).permit!
-end 
+    private
+
+    def find_listing
+      @listing = Listing.find(params[:id])
+    end
+
+    def listings_params
+      params.require(:listing).permit!
+    end 
 
 
 end 
