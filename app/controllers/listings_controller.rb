@@ -12,13 +12,19 @@ class ListingsController < ApplicationController
 
     def new
         @listing = Listing.new
-        @cat = Cat.last
+        @cats = Cat.all
         @adoption_centers = AdoptionCenter.all
     end
 
     def create
         @listing = Listing.create(listings_params)
-        redirect_to listing_path(@listing)
+
+        if @listing.valid?
+            redirect_to listing_path(@listing)
+        else 
+           flash[:errors] = @listing.errors.full_messages
+            redirect_to new_listing_path
+        end
     end
 
     def edit
