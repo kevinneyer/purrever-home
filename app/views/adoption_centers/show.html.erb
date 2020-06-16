@@ -1,7 +1,7 @@
 <h1>Welcome to the Cat Sancutary!</h1>
 
-<%= @adoption_center.name %><br>
-<%= @adoption_center.location %>
+<p> Center Name: <%= @adoption_center.name %></p>
+<p>Center Location: <%= @adoption_center.location %></p>
 
 <!-- <%= form_tag  %>
 
@@ -14,9 +14,9 @@ Email: <%= text_field_tag "email" %>
 <!-- <form action="/adoption_centers/new" method="get"></form> -->
 
 <form action="<%= success_path %>" method="GET">
-<label>Post title:</label><br>
+<label>Email Address:</label><br>
 <input type="text" id="post_title" name="post[title]"><br>
-<label>Post description:</label><br>
+<label>Inquiry:</label><br>
 <textarea id="post_description" name="post[description]"></textarea><br>
 <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 <input type="submit" value="Submit Post">

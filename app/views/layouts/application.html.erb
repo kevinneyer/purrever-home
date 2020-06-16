@@ -7,10 +7,22 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    
   </head>
 
   <body>
     <h2>Purrever Home</h2>
+          <ul>
+        <li><%= link_to 'All Listings', listings_path %></li>
+        <li><%= link_to 'All Adoption Centers', adoption_centers_path %></li>
+        <li><%= link_to 'New Listing', new_listing_path %></li>
+
+    
+          <li class='right'>Sign-up</li>
+          <li class='right'> Login </li>
+       
+      </ul>
     <%= yield %>
   </body>
 </html>
