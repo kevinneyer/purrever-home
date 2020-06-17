@@ -33,7 +33,7 @@
     float: right;
   }
 
-  .navbar, li {
+  #navbar, li {
     text-align: center;
     background-color: black;
     color: whitesmoke

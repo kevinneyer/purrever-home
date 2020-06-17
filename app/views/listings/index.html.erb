@@ -3,8 +3,15 @@
   <h3><%= flash[:success] %></h3>
 <%end%>
 
-<% @listings.each do |listing| %>
-<ul><li><%= link_to listing.cat.name, listing_path(listing) %></li></ul>
-<% end %>
+  <div class="flex-container">
+  <% @listings.each do |listing| %>
+  
+      <div class="card"><%= link_to listing.cat.name, listing_path(listing) %></div>
+   
+  <% end %>
+   </div>
+  
+
+
 
 <%= button_to "Create a New Listing!", flow_path, method: :get%>

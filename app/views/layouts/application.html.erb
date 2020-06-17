@@ -10,6 +10,8 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link rel="stylesheet" href= "./application.css"/>
     <link rel="stylesheet" href= "./welcome.scss"/>
+    <link rel="stylesheet" href= "./welcome.scss"/>
+
 
     
   </head>
@@ -18,8 +20,7 @@
     
   
 
-     <div class = "navbar"> 
-
+     <div id="navbar"> 
       <ul>
         <li><%= link_to 'All Listings', listings_path %></li>
         <li><%= link_to 'All Adoption Centers', adoption_centers_path %></li>
