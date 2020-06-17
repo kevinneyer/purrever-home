@@ -8,11 +8,14 @@
 
 
 Cat.destroy_all
-# User.destroy_all
+User.destroy_all
 AdoptionCenter.destroy_all
 Listing.destroy_all
 
-# User.create
+user1 = User.create(username: "jexotic" , password:"tigerking")
+user2 = User.create(username: "carolb", password: "nemesis")
+user3 = User.create(username:"travis", password:"maldonado")
+
 
 titles = [
     "Pawsitively Cute",
