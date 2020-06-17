@@ -11,9 +11,9 @@ class ListingsController < ApplicationController
     end
 
     def new
-        @listing = Listing.new
-        @cats = Cat.all
-        @adoption_centers = AdoptionCenter.all
+      @listing = Listing.new
+      @cats = Cat.all
+      @adoption_centers = AdoptionCenter.all
     end
 
     def create
