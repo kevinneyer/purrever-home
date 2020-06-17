@@ -9,7 +9,9 @@ class UsersController < ApplicationController
   
       if user.valid? 
         session[:user_id] = user.id
+        flash[:success] = "You've successfully Signed Up!"
         redirect_to listings_path
+        
     else
       flash[:errors] = user.errors.full_messages
 
