@@ -21,6 +21,10 @@
     
           <li class='right'>Sign-up</li>
           <li class='right'> <%= link_to "Login", new_login_path %> </li>
+
+          <% if @current_user %>
+            <li class='right'> Welcome <%=  @current_user.username %></li>   
+          <%end%>    
        
       </ul>
     <%= yield %>
