@@ -25,10 +25,30 @@
   }
   
   li:hover {
-    background-color: rgb(177, 254, 255);
+    background-color:#ff713d ;
     transition-duration: 1s;
   }
   
   .right {
     float: right;
   }
+
+  .navbar, li {
+    text-align: center;
+    background-color: black;
+    color: whitesmoke
+    /* text-decoration: none; */
+  }
+
+  a:link {
+    text-decoration: none ;
+    
+  }
+
+  a:visited {
+    color: whitesmoke;
+    text-decoration: none ;
+  }
+
+
+  

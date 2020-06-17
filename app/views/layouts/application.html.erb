@@ -1,19 +1,26 @@
 <!DOCTYPE html>
+
 <html>
   <head>
-    <title>PurreverHome</title>
+    <title>PurrEverHome</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href= "./application.css"/>
+    <link rel="stylesheet" href= "./welcome.scss"/>
 
     
   </head>
 
   <body>
-    <h2>Purrever Home</h2>
-          <ul>
+    
+  
+
+     <div class = "navbar"> 
+
+      <ul>
         <li><%= link_to 'All Listings', listings_path %></li>
         <li><%= link_to 'All Adoption Centers', adoption_centers_path %></li>
         <li><%= link_to 'New Listing', new_listing_path %></li>
@@ -21,9 +28,11 @@
     
           <li class='right'><%= link_to "Sign-up", new_user_path %></li>
           <li class='right'> <%= link_to "Login", new_login_path %> </li>
-
-       
       </ul>
+    </div> 
+
+
+    
     <%= yield %>
   </body>
 </html>
