@@ -1,7 +1,7 @@
 <h1><%= @cat.name %>'s Listing </h1>
 
 <%if flash[:mob] %>
-<%= flash[:mob] %>
+<h3><%= flash[:mob] %></h3>
 <% end %>
 
 <h4>Posted On: <%= @listing.date_added.strftime("%m-%d-%Y") %></h3><br>
