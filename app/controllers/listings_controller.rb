@@ -61,3 +61,4 @@ class ListingsController < ApplicationController
 
 
 end 
+ 
