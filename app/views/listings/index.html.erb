@@ -10,7 +10,7 @@
 
   <div class="flex-container">
     <% @listings.each do |listing| %>
-      <div class="card"><%= listing.cat.name %>
+      <div class="card"><%=link_to listing.cat.name, listing_path(listing) %>
         <a href="<%=listing_path(listing)%>"><img src="<%= listing.cat.image_url%>">
       </div>
     <% end %>

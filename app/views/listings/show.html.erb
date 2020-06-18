@@ -4,6 +4,7 @@
 <h3><%= flash[:mob] %></h3>
 <% end %>
 
+<h4>Adoption Center: <%= @listing.adoption_center.location %></h4>
 <h4>Posted On: <%= @listing.date_added.strftime("%m-%d-%Y") %></h3><br>
 
 <%= image_tag "#{@cat.image_url}" %><br>
@@ -15,6 +16,7 @@
 <h3><%=@cat.name%>'s Content: <%= @listing.content %></h3>
 <h3>Favorite Title: <%= @listing.title %></h3>
 <h3>Favorite Food: <%= @cat.favorite_food%></h3>
+
 
 <p><%= button_to "Edit Listing", edit_listing_path, method: :get %></p>
 

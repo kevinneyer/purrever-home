@@ -29,9 +29,10 @@ class ListingsController < ApplicationController
 
     def edit
         if logged_in?
-            render :edit
+           
             @cats = Cat.all
             @adoption_centers = AdoptionCenter.all
+            render :edit
         else
             flash[:mob] = "You need to be logged in as an employee!"
             redirect_to listing_path(@listing)
