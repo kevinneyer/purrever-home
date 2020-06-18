@@ -15,6 +15,7 @@
 <h3><%=@cat.name%>'s Content: <%= @listing.content %></h3>
 <h3>Favorite Title: <%= @listing.title %></h3>
 <h3>Favorite Food: <%= @cat.favorite_food%></h3>
+<h3>Adoption Center: <%= @listing.adoption_center.location %></h3>
 
 <p><%= button_to "Edit Listing", edit_listing_path, method: :get %></p>
 
