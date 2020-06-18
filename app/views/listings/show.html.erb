@@ -1,8 +1,13 @@
 <h1><%= @cat.name %>'s Listing </h1>
 
+<%if flash[:mob] %>
+<%= flash[:mob] %>
+<% end %>
+
 <h4>Posted On: <%= @listing.date_added.strftime("%m-%d-%Y") %></h3><br>
 
 <%= image_tag "#{@cat.image_url}" %><br>
+
 
 <h3>Name: <%= @cat.name %></h3>
 <h3>Breed: <%= @cat.breed %></h3>

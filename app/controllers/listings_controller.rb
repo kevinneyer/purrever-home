@@ -28,8 +28,14 @@ class ListingsController < ApplicationController
     end
 
     def edit
-        @cats = Cat.all
-        @adoption_centers = AdoptionCenter.all
+        if logged_in?
+            render :edit
+            @cats = Cat.all
+            @adoption_centers = AdoptionCenter.all
+        else
+            flash[:mob] = "You need to be logged in as an employee!"
+            redirect_to listing_path(@listing)
+        end
     end
 
     def update
