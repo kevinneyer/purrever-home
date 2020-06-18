@@ -1,23 +1,15 @@
 <h1><%= @cat.name %>'s Listing </h1>
 
-
-<h2><%= @listing.title %></h2><br>
-
-<h3><%= @listing.content %></h3><br>
- 
-<%= @listing.date_added %>
+<h4>Posted On: <%= @listing.date_added.strftime("%m-%d-%Y") %></h3><br>
 
 <%= image_tag "#{@cat.image_url}" %><br>
 
 <h3>Name: <%= @cat.name %></h3>
 <h3>Breed: <%= @cat.breed %></h3>
 <h3>Age: <%= @cat.age %></h3>
+<h3><%=@cat.name%>'s Content: <%= @listing.content %></h3>
+<h3>Favorite Title: <%= @listing.title %></h3>
 <h3>Favorite Food: <%= @cat.favorite_food%></h3>
-
-
-
-
-<p><%= button_to "Return to All Listings", listings_path, method: :get %></p>
 
 <p><%= button_to "Edit Listing", edit_listing_path, method: :get %></p>
 
