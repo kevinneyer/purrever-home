@@ -21,7 +21,7 @@
   ul li {
     display: inline-block;
     padding: 20px;
-    color: white;
+    color: whitesmoke;
   }
   
   li:hover {
@@ -42,6 +42,7 @@
 
   a:link {
     text-decoration: none ;
+    color: whitesmoke
     
   }
 
@@ -50,14 +51,14 @@
     text-decoration: none ;
   }
 
-  img {
+  /* img {
     FONT-VARIANT: JIS04;
     border-radius: 15px;
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 40vw;
-}
+} */
 
 
   
