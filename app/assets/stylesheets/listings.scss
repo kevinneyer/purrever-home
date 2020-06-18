@@ -9,20 +9,38 @@ h1{
 
 .flex-container{
     display: flex;
-    background-color: lightgrey;
+    background-color: whitesmoke;
     justify-content: space-around;
-  
+    // flex-flow: column wrap;
+    flex-wrap: wrap;
 }
 
 .card{
-    flex-flow: column wrap;
-    height: 10vw;
-    background-color: pink;
+    height: 30vw;
+    background-color: orange;
     margin: 2em;
-  
+    text-align: center;  
+    width: 25vw;
+    font-size: larger;
+    font-weight: bold;
+    line-height: 100px; 
 }
+
 
 a:link{
     color: black
 }
+
+div img{
+    width: 18vw;
+}
+
+div img:hover{
+    width: 22vw;
+}
+
+
+
+
+
 
