@@ -3,6 +3,11 @@
   <h3><%= flash[:success] %></h3>
 <%end%>
 
+<% if flash[:mob] %>
+  <h3><%= flash[:mob] %></h3>
+<%end%>
+
+
   <div class="flex-container">
     <% @listings.each do |listing| %>
       <div class="card"><%= listing.cat.name %><a href="<%=listing_path(listing)%>"><img src="<%= listing.cat.image_url%>">
