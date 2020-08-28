@@ -23,5 +23,4 @@ class CatsController < ApplicationController
         params.require(:cat).permit!
     end
 
-
 end

@@ -7,13 +7,10 @@
   <h3><%= flash[:mob] %></h3>
 <%end%>
 
-
-  <div class="flex-container">
-    <% @listings.each do |listing| %>
-      <div class="card"><%=link_to listing.cat.name, listing_path(listing) %>
-        <a href="<%=listing_path(listing)%>"><img src="<%= listing.cat.image_url%>">
-      </div>
-    <% end %>
-  </div>
-
-  <%# "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.7qBz92y6-WsQwPYHoc7oqwHaF7%26pid%3DApi&f=1" alt="cat peeking" %>
+<div class="flex-container">
+  <% @listings.each do |listing| %>
+    <div class="card"><%=link_to listing.cat.name, listing_path(listing) %>
+      <a href="<%=listing_path(listing)%>"><img src="<%= listing.cat.image_url%>">
+    </div>
+  <% end %>
+</div>

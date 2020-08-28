@@ -1,12 +1,13 @@
 <h1>View All Adoption Centers</h1>
 
 <div class="flex-container">
-<% @adoption_centers.each do |adoption_center| %>
-   <div class="card"> Center Name: <%= adoption_center.name %>    
-    Location: <%= adoption_center.location %><br>
-   <%= link_to "Contact Here", adoption_center_path(adoption_center) %></div>
-    <% end %>
-  </div>
+  <% @adoption_centers.each do |adoption_center| %>
+    <div class="card"> Center Name: <%= adoption_center.name %>    
+      Location: <%= adoption_center.location %><br>
+      <%= link_to "Contact Here", adoption_center_path(adoption_center) %>
+    </div>
+  <% end %>
+</div>
 
   
     

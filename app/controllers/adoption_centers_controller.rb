@@ -8,5 +8,4 @@ class AdoptionCentersController < ApplicationController
         @adoption_center = AdoptionCenter.find(params[:id])
     end
 
-    
 end

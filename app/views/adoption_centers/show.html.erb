@@ -3,23 +3,11 @@
 <p> Center Name: <%= @adoption_center.name %></p>
 <p>Center Location: <%= @adoption_center.location %></p>
 
-<!-- <%= form_tag  %>
-
-<%= form_tag("") do %>  
-Name: <%= text_field_tag "name" %><br> 
-Email: <%= text_field_tag "email" %>
-<%= submit_tag "Create Person" %>
-<% end %> -->
-
-<!-- <form action="/adoption_centers/new" method="get"></form> -->
-
 <form action="<%= success_path %>" method="GET">
-<label>Email Address:</label><br>
-<input type="text" id="post_title" name="post[title]"><br>
-<label>Inquiry:</label><br>
-<textarea id="post_description" name="post[description]"></textarea><br>
-<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-<input type="submit" value="Send Inquiry">
+    <label>Email Address:</label><br>
+    <input type="text" id="post_title" name="post[title]"><br>
+    <label>Inquiry:</label><br>
+    <textarea id="post_description" name="post[description]"></textarea><br>
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <input type="submit" value="Send Inquiry">
 </form>
-
-
