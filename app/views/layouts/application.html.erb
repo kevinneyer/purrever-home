@@ -15,20 +15,13 @@
   </head>
 
   <body>
-    
-  
-
-     <div id="navbar"> 
+    <div id="navbar"> 
       <ul>
         <li><%= link_to 'All Listings', listings_path %></li>
         <li><%= link_to "Create a New Listing!", flow_path %></li>
         <li><%= link_to 'All Adoption Centers', adoption_centers_path %></li>
-        
-        
-          <%# <li class='right'><%= link_to "Sign-up", new_user_path %>
-          <%# <li class='right'> <%= link_to "Login", new_login_path %>
 
-          <% if @current_user %>
+        <% if @current_user %>
           <li class='right'> Welcome <%=  @current_user.username %></li>                    
           <li class='right'><%= link_to "Log-Out", logout_path, method: :delete %></li>
         <% else %>
@@ -37,9 +30,6 @@
         <% end %>
       </ul>
     </div> 
-
-
-    
-    <%= yield %>
+  <%= yield %>
   </body>
 </html>

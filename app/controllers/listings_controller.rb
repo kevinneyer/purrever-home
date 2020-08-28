@@ -2,6 +2,7 @@ class ListingsController < ApplicationController
   
     before_action :find_listing, only: [:show, :edit, :update, :destroy]
     before_action :logged_in?
+
     def index
         @listings = Listing.all 
     end
@@ -22,14 +23,13 @@ class ListingsController < ApplicationController
         if @listing.valid?
             redirect_to listing_path(@listing)
         else 
-           flash[:errors] = @listing.errors.full_messages
+            flash[:errors] = @listing.errors.full_messages
             redirect_to new_listing_path
         end
     end
 
     def edit
         if logged_in?
-           
             @cats = Cat.all
             @adoption_centers = AdoptionCenter.all
             render :edit
@@ -53,13 +53,12 @@ class ListingsController < ApplicationController
     private
 
     def find_listing
-      @listing = Listing.find(params[:id])
+        @listing = Listing.find(params[:id])
     end
 
     def listings_params
-      params.require(:listing).permit!
+        params.require(:listing).permit!
     end 
-
-
+    
 end 
  
