@@ -1,27 +1,10 @@
-# README
+# ABOUT
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Purrever Home is a cat adoption site bringing awareness to cats up for adoption and their respective adoption center locations. Built with Ruby on Rails on utilizing sessions, functionality differes once logged in. Signed in users can create, edit, and delete adoption listings.
 
-Things you may want to cover:
+To get started, run $ rails s in your console, and open your respective localhost server.
 
-* Ruby version
+# AUTHORS
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Testing - Hello!
+Catherine Jimenez https://github.com/cathjime
+Kevin Neyer https://github.com/kevinneyer
