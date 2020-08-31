@@ -6,5 +6,6 @@ To get started, run $ rails s in your console, and open your respective localhos
 
 # AUTHORS
 
-Catherine Jimenez https://github.com/cathjime
-Kevin Neyer https://github.com/kevinneyer
+Catherine Jimenez: https://github.com/cathjime
+
+Kevin Neyer: https://github.com/kevinneyer
